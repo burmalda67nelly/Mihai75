@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihai 75.0 💻❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="confetti"></canvas>
+    <div id="hearts"></div>
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicToggle" class="music-btn">🔊</button>
+
+    <!-- =========================
+         💻 ГЛАВНЫЙ ЭКРАН
+         ========================= -->
+
+    <section id="cover">
+
+        <div class="laptop-cover">
+
+            <div class="laptop-screen">
+
+                <div class="screen-glow"></div>
+
+                <!-- 🔐 ЭКРАН БЛОКИРОВКИ -->
+
+                <div id="lockScreen">
+
+                    <div class="lock-icon">🔒</div>
+
+                    <h1>La mulți ani, Mihai!</h1>
+
+                    <p class="question">
+                        Pentru a debloca acest computer,<br>
+                        răspunde la întrebare:
+                    </p>
+
+                    <h2>
+                        Câți ani împlinește Bunelu? 🎂
+                    </h2>
+
+                    <input
+                        type="number"
+                        id="answerInput"
+                        placeholder="Introdu vârsta..."
+                        autocomplete="off"
+                    >
+
+                    <button id="unlockBtn">
+                        Deblochează 💻
+                    </button>
+
+                    <p id="errorMessage"></p>
+
+                </div>
+
+
+                <!-- ✅ ЭКРАН УСПЕШНОЙ РАЗБЛОКИРОВКИ -->
+
+                <div id="successScreen" class="hidden">
+
+                    <div class="success-icon">✓</div>
+
+                    <h1>Acces permis</h1>
+
+                    <p>
+                        Bine ai venit, Mihai! ❤️
+                    </p>
+
+                    <p class="loading-text">
+                        Se încarcă amintirile...
+                    </p>
+
+                    <div class="loading-bar">
+                        <div id="loadingProgress"></div>
+                    </div>
+
+                    <div id="loadingText">
+                        Inițializare sistem...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 💻 НИЗ НОУТБУКА -->
+
+            <div class="laptop-base">
+
+                <div class="keyboard">
+
+                    <div class="key-row">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+
+                    <div class="key-row">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span>
+                    </div>
+
+                    <div class="key-row">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="space-key"></div>
+
+                </div>
+
+                <div class="trackpad"></div>
+
+            </div>
+
+            <p class="laptop-hint">
+                💻 Sistem personal • Mihai • 75
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         📖 КНИГА
+         ========================= -->
+
+    <section id="book" class="hidden">
+
+        <!-- РАЗВОРОТ 1 -->
+
+        <div class="spread active">
+
+            <div class="left-page">
+
+                <div class="page-label">
+                    MIHAI 75.0
+                </div>
+
+                <h2>
+                    La mulți ani,<br>
+                    Bunelu! ❤️
+                </h2>
+
+                <p>
+                    75 de ani de povești,
+                    experiență, înțelepciune
+                    și momente frumoase.
+                </p>
+
+                <p>
+                    Iar pentru noi,
+                    ești unul dintre cei mai
+                    importanți oameni din lume.
+                </p>
+
+            </div>
+
+            <div class="right-page">
+                <img src="images/photo1.jpg" alt="Mihai">
+            </div>
+
+        </div>
+
+
+        <!-- РАЗВОРОТ 2 -->
+
+        <div class="spread">
+
+            <div class="left-page photo-page">
+
+                <h2>Amintiri ❤️</h2>
+
+                <p>
+                   grijuliu, ca să fie bine la tăt neamu'!
+                </p>
+
+                <div class="photo-wrapper">
+                    <img src="images/photo2.jpg" alt="Mihai">
+                </div>
+
+            </div>
+
+            <div class="right-page photo-page">
+
+                <div class="photo-wrapper">
+                    <img src="images/photo3.jpg" alt="Mihai">
+                </div>
+
+                <h2>Momente speciale</h2>
+
+                <p>
+                    Important, e sa ne bucuram de lucruri mici, dar bunelul este un adevarat master in asta
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- РАЗВОРОТ 3 -->
+
+        <div class="spread">
+
+            <div class="left-page photo-page">
+
+                <h2>Familia ❤️</h2>
+
+                <p>
+                    Cele mai frumoase
+                    amintiri sunt cele
+                    petrecute împreună.
+                </p>
+
+                <div class="photo-wrapper">
+                    <img src="images/photo4.jpg" alt="Familia">
+                </div>
+
+            </div>
+
+          <div class="right-page photo-page third-right-page">
+
+    <div class="photo-wrapper">
+        <img
+            src="images/photo5.jpg"
+            alt="Amintire"
+        >
+    </div>
+
+    <div class="photo-wrapper">
+        <img
+            src="images/photo6.jpg"
+            alt="Amintire"
+        >
+    </div>
+    <p>
+      Mereu vom ramane aproape unul de altul necatand de vreme si moment  
+    </p>
+
+</div>
+
+</div>
+
+
+<!-- РАЗВОРОТ 4 -->
+    
+
+
+        <!-- РАЗВОРОТ 4 -->
+
+        <div class="spread">
+
+            <div class="left-page photo-page">
+
+                <h2>75 de ani ✨</h2>
+
+                <p>
+                   mereu înainte, cu zîmbetul pe buze și cu sufletul senin!
+                </p>
+
+                <div class="photo-wrapper">
+                    <img src="images/photo7.jpg" alt="Mihai">
+                </div>
+
+            </div>
+
+            <div class="right-page photo-page">
+
+                <div class="photo-wrapper">
+                    <img src="images/photo8.jpg" alt="Mihai">
+                </div>
+
+                <h2>Împreună </h2>
+
+                <p>
+                    69% din viață achit taxa de căsnicie.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- РАЗВОРОТ 5 -->
+
+        <div class="spread">
+
+            <div class="left-page">
+
+                <div class="code-decoration">
+                    
+                </div>
+
+                <h2>
+                   <h2>75 de ani ✨</h2>
+                </h2>
+
+                <p>
+                   
+                    75 de ani de experiență
+                    și încă mai multe
+                    aventuri înainte!
+                </p>
+
+                <div class="code-decoration">
+                    
+                </div>
+
+            </div>
+
+            <div class="right-page">
+                <img src="images/photo9.jpg" alt="Familia">
+            </div>
+
+        </div>
+
+
+        <!-- 🎂 ФИНАЛ -->
+
+        <div class="spread final-spread">
+
+            <div class="final-content">
+
+                <div class="system-complete">
+                    SYSTEM UPDATE COMPLETE ✓
+                </div>
+
+                <h2>
+                    La mulți ani,<br>
+                    Mihai! 🎉
+                </h2>
+
+                <div id="cake">
+
+                    <div class="cake-top"></div>
+                    <div class="cake-bottom"></div>
+
+                    <div class="candle candle-1"></div>
+                    <div class="candle candle-2"></div>
+                    <div class="candle candle-3"></div>
+
+                    <div class="digit-seven">7</div>
+                    <div class="digit-five">5</div>
+
+                </div>
+
+                <p class="cake-text">
+                    👆 Apasă pe tort pentru
+                    a stinge lumânările
+                </p>
+
+                <div id="finalMessage">
+
+                    <div class="final-code">
+                        SYSTEM MESSAGE
+                    </div>
+
+                    <h3>Mihai 75.0</h3>
+
+                    <p>
+                        75 years of experience<br>
+                        0 critical errors<br>
+                        ∞ family love ❤️
+                    </p>
+
+                    <strong>
+                        System will continue running...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ⬅️➡️ НАВИГАЦИЯ -->
+    </section>
+
+    <div class="navigation">
+        <button id="prevBtn" type="button">←</button>
+        <button id="nextBtn" type="button">→</button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+       
+
+</body>
+</html>
